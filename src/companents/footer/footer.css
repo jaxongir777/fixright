@@ -1,0 +1,377 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  padding: 95px 0;
+  background: #122238;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 65px;
+}
+
+/* LEFT CONTENT */
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+
+.footer-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 24px;
+  color: #6ee7b7;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.footer-label-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #34d399;
+}
+
+.footer-content h2 {
+  margin: 0 0 22px;
+  color: #fff;
+  font-size: clamp(48px, 6vw, 76px);
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1.05;
+}
+
+.footer-content h2 span {
+  color: #34d399;
+}
+
+.footer-content > p {
+  max-width: 470px;
+  margin: 0;
+  color: #bdc9d6;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* BUTTONS */
+
+.footer-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.footer-btn-primary,
+.footer-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 16px 21px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-btn-primary {
+  background: #10b981;
+  color: #fff;
+}
+
+.footer-btn-primary:hover {
+  background: #059669;
+  transform: translateY(-3px);
+}
+
+.footer-btn-primary span {
+  font-size: 18px;
+}
+
+.footer-btn-secondary {
+  border: 1px solid #455568;
+  color: #fff;
+}
+
+.footer-btn-secondary:hover {
+  border-color: #34d399;
+  color: #6ee7b7;
+  transform: translateY(-3px);
+}
+
+.footer-btn-secondary span {
+  font-size: 18px;
+}
+
+/* TRUST */
+
+.footer-trust {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 30px;
+  color: #c1ccda;
+  font-size: 12px;
+}
+
+.footer-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #1b4c45;
+  color: #6ee7b7;
+  font-size: 11px;
+}
+
+.footer-trust-divider {
+  width: 1px;
+  height: 17px;
+  margin: 0 8px;
+  background: #455568;
+}
+
+/* RIGHT VISUAL */
+
+.footer-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 430px;
+}
+
+.footer-circle {
+  position: absolute;
+  border: 1px solid rgba(110, 231, 183, 0.17);
+  border-radius: 50%;
+}
+
+.footer-circle-one {
+  width: 350px;
+  height: 350px;
+}
+
+.footer-circle-two {
+  width: 450px;
+  height: 450px;
+}
+
+.footer-tool-card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 340px);
+  padding: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 20px;
+  background: linear-gradient(145deg, #20374e, #172a3f);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+  transform: rotate(2deg);
+  transition: transform 0.35s ease;
+}
+
+.footer-tool-card:hover {
+  transform: rotate(0deg) translateY(-5px);
+}
+
+.footer-tool-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+  margin-bottom: 28px;
+  border-radius: 17px;
+  background: #d1fae5;
+  color: #047857;
+}
+
+.footer-tool-small {
+  display: block;
+  margin-bottom: 15px;
+  color: #9db1c2;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.footer-tool-card h3 {
+  margin: 0 0 5px;
+  color: #fff;
+  font-size: 31px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.footer-tool-card .footer-green-text {
+  color: #34d399;
+}
+
+.footer-tool-card > p {
+  margin: 16px 0 25px;
+  color: #bdc9d6;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.footer-card-line {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-top: 18px;
+  border-top: 1px solid #3b4e60;
+  color: #d4e0e8;
+  font-size: 12px;
+}
+
+.footer-card-line span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #34d399;
+}
+
+/* FLOATING BADGE */
+
+.footer-floating-badge {
+  position: absolute;
+  right: -5px;
+  bottom: 40px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 17px;
+  border: 1px solid #e0eee7;
+  border-radius: 10px;
+  background: #fff;
+  color: #122238;
+  font-size: 11px;
+  font-weight: 700;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.footer-floating-badge span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #d1fae5;
+  color: #047857;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 75px 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .footer-content {
+    max-width: 650px;
+  }
+
+  .footer-visual {
+    min-height: 420px;
+  }
+
+  .footer-floating-badge {
+    right: 5%;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 60px 0;
+  }
+
+  .footer-content h2 {
+    font-size: 49px;
+    letter-spacing: -2px;
+  }
+
+  .footer-content > p {
+    font-size: 14px;
+  }
+
+  .footer-buttons {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .footer-btn-primary,
+  .footer-btn-secondary {
+    justify-content: space-between;
+  }
+
+  .footer-trust {
+    font-size: 11px;
+  }
+
+  .footer-visual {
+    min-height: 370px;
+  }
+
+  .footer-circle-one {
+    width: 270px;
+    height: 270px;
+  }
+
+  .footer-circle-two {
+    width: 340px;
+    height: 340px;
+  }
+
+  .footer-tool-card {
+    width: 280px;
+    padding: 27px;
+  }
+
+  .footer-tool-card h3 {
+    font-size: 27px;
+  }
+
+  .footer-floating-badge {
+    right: 0;
+    bottom: 10px;
+    max-width: 250px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer-content h2 {
+    font-size: 42px;
+  }
+
+  .footer-tool-card {
+    width: 250px;
+    padding: 23px;
+  }
+
+  .footer-floating-badge {
+    right: -5px;
+    padding: 10px;
+  }
+}

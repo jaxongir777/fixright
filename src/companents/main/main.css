@@ -1,0 +1,539 @@
+/* =========================
+   WHAT I FIX
+========================= */
+
+.fix-main {
+  width: 100%;
+  padding: 100px 0;
+  overflow: hidden;
+  background: #f8fbfa;
+}
+
+.fix-main .container {
+  width: min(100% - 48px, 1280px);
+  margin: 0 auto;
+}
+
+.main-container {
+  width: 100%;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.fix-heading {
+  max-width: 650px;
+  margin: 0 auto 52px;
+  text-align: center;
+}
+
+.fix-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-bottom: 20px;
+  padding: 9px 15px;
+  color: #047857;
+  background: #ecfdf5;
+  border: 1px solid #d1fae5;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.fix-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.12);
+}
+
+.fix-title {
+  margin: 0;
+  color: #122238;
+  font-size: clamp(38px, 4.5vw, 56px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -2.4px;
+}
+
+.fix-title span {
+  color: #059669;
+}
+
+.fix-description {
+  max-width: 540px;
+  margin: 18px auto 0;
+  color: #687789;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* =========================
+   SERVICES GRID
+========================= */
+
+.fix-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* =========================
+   SERVICE CARD
+========================= */
+
+.fix-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 295px;
+  padding: 27px 25px 22px;
+  background: #ffffff;
+  border: 1px solid #e4ece8;
+  border-radius: 20px;
+  box-shadow: 0 6px 25px rgba(18, 34, 56, 0.025);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.fix-card::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 25px;
+  width: 45px;
+  height: 3px;
+  background: #10b981;
+  border-radius: 0 0 5px 5px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.fix-card:hover {
+  transform: translateY(-7px);
+  border-color: #a7f3d0;
+  box-shadow: 0 20px 40px rgba(18, 34, 56, 0.07);
+}
+
+.fix-card:hover::before {
+  transform: scaleX(1);
+}
+
+.fix-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.fix-icon {
+  width: 57px;
+  height: 57px;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  color: #059669;
+  background: #ecfdf5;
+  border: 1px solid #d1fae5;
+  border-radius: 16px;
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.fix-icon svg {
+  width: 27px;
+  height: 27px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.fix-card:hover .fix-icon {
+  color: #ffffff;
+  background: #059669;
+  transform: rotate(-5deg);
+}
+
+.fix-number {
+  color: #c5d0d8;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  transition: color 0.3s ease;
+}
+
+.fix-card:hover .fix-number {
+  color: #059669;
+}
+
+.fix-card h3 {
+  margin: 0 0 11px;
+  color: #122238;
+  font-size: 19px;
+  font-weight: 750;
+  line-height: 1.4;
+  letter-spacing: -0.4px;
+}
+
+.fix-card-description {
+  margin: 0;
+  color: #718093;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.fix-card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 22px;
+  color: #047857;
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.fix-card-link svg {
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.fix-card-link:hover {
+  color: #065f46;
+}
+
+.fix-card-link:hover svg {
+  transform: translateX(5px);
+}
+
+.fix-card-link:focus-visible,
+.fix-bottom-btn:focus-visible {
+  outline: 3px solid #6ee7b7;
+  outline-offset: 4px;
+}
+
+/* =========================
+   BOTTOM CTA
+========================= */
+
+.fix-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 30px;
+  padding: 25px 28px;
+  background: #ffffff;
+  border: 1px solid #e2eee7;
+  border-radius: 19px;
+}
+
+.fix-bottom-text {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+}
+
+.fix-bottom-icon {
+  width: 49px;
+  height: 49px;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  color: #059669;
+  background: #ecfdf5;
+  border: 1px solid #d1fae5;
+  border-radius: 14px;
+}
+
+.fix-bottom-text h3 {
+  margin: 0 0 5px;
+  color: #122238;
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.5;
+}
+
+.fix-bottom-text p {
+  margin: 0;
+  color: #718093;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.fix-bottom-btn {
+  min-height: 48px;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 0 19px;
+  color: #ffffff;
+  background: #059669;
+  border: 1px solid #059669;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.15);
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.fix-bottom-btn svg {
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.fix-bottom-btn:hover {
+  color: #ffffff;
+  background: #047857;
+  border-color: #047857;
+  box-shadow: 0 10px 22px rgba(5, 150, 105, 0.23);
+  transform: translateY(-2px);
+}
+
+.fix-bottom-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media (max-width: 1050px) {
+  .fix-main {
+    padding: 80px 0;
+  }
+
+  .fix-grid {
+    gap: 17px;
+  }
+
+  .fix-card {
+    padding: 23px 20px 20px;
+  }
+
+  .fix-card h3 {
+    font-size: 17px;
+  }
+
+  .fix-card-description {
+    font-size: 12px;
+  }
+
+  .fix-icon {
+    width: 51px;
+    height: 51px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 760px) {
+  .fix-main {
+    padding: 70px 0;
+  }
+
+  .fix-heading {
+    margin-bottom: 36px;
+  }
+
+  .fix-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .fix-card {
+    min-height: 275px;
+  }
+
+  .fix-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 19px;
+  }
+
+  .fix-bottom-btn {
+    width: 100%;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 520px) {
+  .fix-main .container {
+    width: calc(100% - 32px);
+  }
+
+  .fix-main {
+    padding: 55px 0;
+  }
+
+  .fix-heading {
+    margin-bottom: 28px;
+  }
+
+  .fix-eyebrow {
+    margin-bottom: 16px;
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+
+  .fix-title {
+    font-size: 39px;
+    letter-spacing: -1.8px;
+  }
+
+  .fix-description {
+    margin-top: 13px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .fix-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .fix-card {
+    min-height: 0;
+    padding: 23px 21px 20px;
+    border-radius: 18px;
+  }
+
+  .fix-card-top {
+    margin-bottom: 20px;
+  }
+
+  .fix-icon {
+    width: 49px;
+    height: 49px;
+    border-radius: 14px;
+  }
+
+  .fix-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .fix-number {
+    font-size: 27px;
+  }
+
+  .fix-card h3 {
+    font-size: 18px;
+  }
+
+  .fix-card-description {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .fix-card-link {
+    padding-top: 19px;
+    font-size: 12px;
+  }
+
+  .fix-bottom {
+    gap: 17px;
+    margin-top: 21px;
+    padding: 19px 16px;
+    border-radius: 17px;
+  }
+
+  .fix-bottom-text {
+    align-items: flex-start;
+    gap: 11px;
+  }
+
+  .fix-bottom-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+  }
+
+  .fix-bottom-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .fix-bottom-text h3 {
+    font-size: 13px;
+  }
+
+  .fix-bottom-text p {
+    font-size: 11px;
+  }
+
+  .fix-bottom-btn {
+    min-height: 46px;
+    font-size: 12px;
+  }
+}
+
+/* =========================
+   EXTRA SMALL PHONES
+========================= */
+
+@media (max-width: 360px) {
+  .fix-main .container {
+    width: calc(100% - 24px);
+  }
+
+  .fix-title {
+    font-size: 34px;
+  }
+
+  .fix-card {
+    padding: 20px 17px 18px;
+  }
+
+  .fix-card h3 {
+    font-size: 17px;
+  }
+
+  .fix-bottom {
+    padding: 16px 13px;
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .fix-main *,
+  .fix-main *::before,
+  .fix-main *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
